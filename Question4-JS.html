@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <title>Question 4 - JavaScript</title>
 
 </head>
@@ -10,13 +11,23 @@
     <h1>HTML DOM Events</h1>
     <p>Trigger a function on hover that will output "Hello World":</p>
 
-    <button onmouseover="myFunction()">Action!</button>
-    <p id="demo"></p>
-</body>
-<script>
-    function myFunction() {
-        document.getElementById("demo").innerHTML = "Hello World";
-    }
-</script>
+    <button 
+        onmouseover="myFunction()"
+        onfocus="myFunction()"
+        onmouseout="clearFunction()"
+        onblur="clearFunction()">
+        Action!
+    </button>
+    <p id="demo" aria-live="polite"></p>
 
+    <script>
+        function myFunction() {
+            document.getElementById("demo").textContent = "Hello World";
+        }
+        function clearFunction() {
+            document.getElementById("demo").textContent = "";
+        }
+    </script>
+</body>
 </html>
+
