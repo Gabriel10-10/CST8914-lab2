@@ -4,17 +4,25 @@
    <title>Question 2 - CSS</title>
    <style>
     .mainsection a {
-      text-decoration: none;
+      text-decoration: underline;
       color: #414040;
       outline: none;
+       transition: background-color 0.3s, color 0.3s;
     }
-
+    .mainsection a:focus,
+    .mainsection a:hover {
+       bachground-color: #d3d3d3;
+       color: #000000;
+    }
+    .mainsection li{
+       margin: 5px 0;
+    }
     
     </style>
 </head>
 <body>
 <div class="mainsection">
-<h1><img src="lab2/lab2-imageoftext.gif" alt="Shopping categories"></h1>
+<h1>Shopping categories</h1>
 
 <ul>
   <li><a href="#">Animals</a></li>
@@ -28,3 +36,4 @@
 
 </body>
 </html>
+
